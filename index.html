@@ -156,12 +156,12 @@
         </div>
         <div class="md:w-1/2 w-full flex justify-center">
             <div data-aos="fade-up" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3" class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden border-2 border-accentBlue/30 shadow-2xl shadow-accentBlue/40 bg-white/90 dark:bg-cardBg/40 shadow-lg shadow-blue-500/10 backdrop-blur-xl card-bg flex flex-col items-center justify-center p-6 sm:p-8 hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-950/40 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 dark:from-blue-950/40 via-blue-100/10 dark:via-transparent to-transparent pointer-events-none rounded-3xl"></div>
                 
                 <!-- SLOT TEMPAT LOGO KAMPUS -->
                 <div class="relative z-10 text-center space-y-3 sm:space-y-4">
-                    <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-2xl bg-white/5 border border-accentBlue/30 flex items-center justify-center p-3 shadow-lg">
-                        <img src="img/Logo_LP3I.png" alt="Logo LP3I Jakarta Pusat" class="max-h-full max-w-full object-contain filter drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]">
+                    <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-2xl bg-white dark:bg-white/5 border border-white/60 dark:border-accentBlue/30 flex items-center justify-center p-3 shadow-xl shadow-blue-500/15 dark:shadow-lg backdrop-blur-md">
+                        <img src="img/Logo_LP3I.png" alt="Logo LP3I Jakarta Pusat" class="max-h-full max-w-full object-contain filter drop-shadow-[0_4px_8px_rgba(59,130,246,0.25)] dark:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-transform duration-300 hover:scale-110">
                     </div>
                     <div class="bg-white/70 dark:bg-darkBg/50 px-4 sm:px-6 py-2 sm:py-3 rounded-xl border border-accentBlue/30 backdrop-blur-sm">
                         <h3 class="text-sm sm:text-base font-bold text-black dark:text-white">LP3I Jakarta Pusat</h3>
@@ -408,81 +408,198 @@
     </section>
 
     <!-- 6. VIDEO PROJECT / TUGAS SECTION -->
-    <section id="video" class="py-12 sm:py-16 px-4 sm:px-6 max-w-7xl mx-auto relative z-10 mb-8 sm:mb-16">
-        <div class="text-center space-y-2 sm:space-y-3 mb-12 sm:mb-16">
+    <style>
+        .carousel-scene {
+            perspective: 1200px;
+            width: 100%;
+            height: 350px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        @media (min-width: 768px) {
+            .carousel-scene {
+                height: 420px;
+            }
+        }
+        .carousel-wrap {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+        }
+        .carousel-item {
+            position: absolute;
+            width: 220px;
+            height: 300px;
+            left: calc(50% - 110px);
+            top: calc(50% - 150px);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        @media (min-width: 768px) {
+            .carousel-item {
+                width: 260px;
+                height: 350px;
+                left: calc(50% - 130px);
+                top: calc(50% - 175px);
+            }
+        }
+        .carousel-item:nth-child(1) { transform: rotateY(0deg) translateZ(150px); }
+        .carousel-item:nth-child(2) { transform: rotateY(72deg) translateZ(150px); }
+        .carousel-item:nth-child(3) { transform: rotateY(144deg) translateZ(150px); }
+        .carousel-item:nth-child(4) { transform: rotateY(216deg) translateZ(150px); }
+        .carousel-item:nth-child(5) { transform: rotateY(288deg) translateZ(150px); }
+        
+        @media (min-width: 768px) {
+            .carousel-item:nth-child(1) { transform: rotateY(0deg) translateZ(220px); }
+            .carousel-item:nth-child(2) { transform: rotateY(72deg) translateZ(220px); }
+            .carousel-item:nth-child(3) { transform: rotateY(144deg) translateZ(220px); }
+            .carousel-item:nth-child(4) { transform: rotateY(216deg) translateZ(220px); }
+            .carousel-item:nth-child(5) { transform: rotateY(288deg) translateZ(220px); }
+        }
+    </style>
+    <section id="video" class="py-12 sm:py-16 px-4 sm:px-6 max-w-7xl mx-auto relative z-10 mb-8 sm:mb-16 overflow-hidden sm:overflow-visible">
+        <div class="text-center space-y-2 sm:space-y-3 mb-8">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">Video <span class="text-accentBlue">Projects & Assignments</span></h2>
             <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">A collection of documentation videos for academic assignments, presentations, and social media</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            <!-- Video 1 (Facebook) -->
-            <div data-aos="fade-up" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" class="rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg card-bg border border-blue-200 dark:border-white/5 section-glow shadow-xl shadow-blue-900/10 dark:shadow-none overflow-hidden hover:scale-105 duration-300 flex flex-col h-full">
-                <div class="h-44 sm:h-48 bg-blue-900/40 flex items-center justify-center relative">
-                    <a href="https://www.facebook.com/share/v/1AJ2gDzhnS/" target="_blank" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-accentBlue text-black dark:text-white flex items-center justify-center text-lg sm:text-xl shadow-lg shadow-accentBlue/40 hover:scale-110 transition">
-                        <i class="fa-solid fa-play ml-1"></i>
-                    </a>
-                </div>
-                <div class="p-5 sm:p-6">
-                    <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-accentBlue font-semibold">Facebook Video</span>
-                    <h4 class="font-bold text-sm sm:text-base mt-2 text-black dark:text-white">Dokumentasi Acara & Creative Visual</h4>
-                </div>
-            </div>
-            <!-- Video 2 (YouTube) -->
-            <div data-aos="fade-up" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" class="rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg card-bg border border-blue-200 dark:border-white/5 section-glow shadow-xl shadow-blue-900/10 dark:shadow-none overflow-hidden hover:scale-105 duration-300 flex flex-col h-full">
-                <div class="h-44 sm:h-48 bg-cover bg-center relative" style="background-image: url('https://img.youtube.com/vi/FeHkgPk-YIg/hqdefault.jpg');">
-                    <a href="https://www.youtube.com/watch?v=FeHkgPk-YIg&t=1s" target="_blank" class="absolute inset-0 flex items-center justify-center bg-black/40">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-accentBlue text-black dark:text-white flex items-center justify-center text-lg sm:text-xl shadow-lg shadow-accentBlue/40 hover:scale-110 transition">
+        
+        <div class="carousel-scene" data-aos="fade-up">
+            <div class="carousel-wrap">
+                <!-- Video 1 (Facebook) -->
+                <div class="carousel-item rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg border border-blue-200 dark:border-white/5 overflow-hidden transition-all duration-300 hover:shadow-blue-500/30">
+                    <div class="h-44 sm:h-48 bg-blue-900/40 flex items-center justify-center relative">
+                        <a href="https://www.facebook.com/share/v/1AJ2gDzhnS/" target="_blank" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-accentBlue text-black dark:text-white flex items-center justify-center text-lg sm:text-xl shadow-lg shadow-accentBlue/40 hover:scale-110 transition">
                             <i class="fa-solid fa-play ml-1"></i>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col justify-center">
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-accentBlue font-semibold w-fit">Facebook Video</span>
+                        <h4 class="font-bold text-sm sm:text-base mt-3 text-black dark:text-white">Dokumentasi Acara & Creative Visual</h4>
+                    </div>
                 </div>
-                <div class="p-5 sm:p-6">
-                    <span class="text-xs px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 font-semibold">YouTube Video</span>
-                    <h4 class="font-bold text-sm sm:text-base mt-2 text-black dark:text-white">Mengenal Ransomware & Tips Phishing</h4>
+                <!-- Video 2 (YouTube) -->
+                <div class="carousel-item rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg border border-blue-200 dark:border-white/5 overflow-hidden transition-all duration-300 hover:shadow-blue-500/30">
+                    <div class="h-44 sm:h-48 bg-cover bg-center relative" style="background-image: url('https://img.youtube.com/vi/FeHkgPk-YIg/hqdefault.jpg');">
+                        <a href="https://www.youtube.com/watch?v=FeHkgPk-YIg&t=1s" target="_blank" class="absolute inset-0 flex items-center justify-center bg-black/40">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-accentBlue text-black dark:text-white flex items-center justify-center text-lg sm:text-xl shadow-lg shadow-accentBlue/40 hover:scale-110 transition">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col justify-center">
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 font-semibold w-fit">YouTube Video</span>
+                        <h4 class="font-bold text-sm sm:text-base mt-3 text-black dark:text-white">Mengenal Ransomware & Tips Phishing</h4>
+                    </div>
                 </div>
-            </div>
-            <!-- Video 3 (YouTube) -->
-            <div data-aos="fade-up" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" class="rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg card-bg border border-blue-200 dark:border-white/5 section-glow shadow-xl shadow-blue-900/10 dark:shadow-none overflow-hidden hover:scale-105 duration-300 flex flex-col h-full">
-                <div class="h-44 sm:h-48 bg-cover bg-center relative" style="background-image: url('https://img.youtube.com/vi/5EkjGZDtP0A/hqdefault.jpg');">
-                    <a href="https://www.youtube.com/watch?v=5EkjGZDtP0A" target="_blank" class="absolute inset-0 flex items-center justify-center bg-black/40">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-accentBlue text-black dark:text-white flex items-center justify-center text-lg sm:text-xl shadow-lg shadow-accentBlue/40 hover:scale-110 transition">
-                            <i class="fa-solid fa-play ml-1"></i>
-                        </div>
-                    </a>
+                <!-- Video 3 (YouTube) -->
+                <div class="carousel-item rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg border border-blue-200 dark:border-white/5 overflow-hidden transition-all duration-300 hover:shadow-blue-500/30">
+                    <div class="h-44 sm:h-48 bg-cover bg-center relative" style="background-image: url('https://img.youtube.com/vi/5EkjGZDtP0A/hqdefault.jpg');">
+                        <a href="https://www.youtube.com/watch?v=5EkjGZDtP0A" target="_blank" class="absolute inset-0 flex items-center justify-center bg-black/40">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-accentBlue text-black dark:text-white flex items-center justify-center text-lg sm:text-xl shadow-lg shadow-accentBlue/40 hover:scale-110 transition">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col justify-center">
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 font-semibold w-fit">YouTube Video</span>
+                        <h4 class="font-bold text-sm sm:text-base mt-3 text-black dark:text-white">Nyari Makan di Jakarta! | Tanya Arah Warteg</h4>
+                    </div>
                 </div>
-                <div class="p-5 sm:p-6">
-                    <span class="text-xs px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 font-semibold">YouTube Video</span>
-                    <h4 class="font-bold text-sm sm:text-base mt-2 text-black dark:text-white">Nyari Makan di Jakarta! | Tanya Arah Warteg</h4>
+                <!-- Video 4 (YouTube) -->
+                <div class="carousel-item rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg border border-blue-200 dark:border-white/5 overflow-hidden transition-all duration-300 hover:shadow-blue-500/30">
+                    <div class="h-44 sm:h-48 bg-cover bg-center relative" style="background-image: url('https://img.youtube.com/vi/oKOVpGQxusU/hqdefault.jpg');">
+                        <a href="https://www.youtube.com/watch?v=oKOVpGQxusU" target="_blank" class="absolute inset-0 flex items-center justify-center bg-black/40">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-accentBlue text-black dark:text-white flex items-center justify-center text-lg sm:text-xl shadow-lg shadow-accentBlue/40 hover:scale-110 transition">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col justify-center">
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 font-semibold w-fit">YouTube Video</span>
+                        <h4 class="font-bold text-sm sm:text-base mt-3 text-black dark:text-white">Tugas UAS - Rekayasa Instalasi Jaringan Kelompok 1</h4>
+                    </div>
                 </div>
-            </div>
-            <!-- Video 4 (YouTube) -->
-            <div data-aos="fade-up" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" class="rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg card-bg border border-blue-200 dark:border-white/5 section-glow shadow-xl shadow-blue-900/10 dark:shadow-none overflow-hidden hover:scale-105 duration-300 flex flex-col h-full">
-                <div class="h-44 sm:h-48 bg-cover bg-center relative" style="background-image: url('https://img.youtube.com/vi/oKOVpGQxusU/hqdefault.jpg');">
-                    <a href="https://www.youtube.com/watch?v=oKOVpGQxusU" target="_blank" class="absolute inset-0 flex items-center justify-center bg-black/40">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-accentBlue text-black dark:text-white flex items-center justify-center text-lg sm:text-xl shadow-lg shadow-accentBlue/40 hover:scale-110 transition">
-                            <i class="fa-solid fa-play ml-1"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="p-5 sm:p-6">
-                    <span class="text-xs px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 font-semibold">YouTube Video</span>
-                    <h4 class="font-bold text-sm sm:text-base mt-2 text-black dark:text-white">Tugas UAS - Rekayasa Instalasi Jaringan Kelompok 1</h4>
-                </div>
-            </div>
-            <!-- Video 5 (YouTube Tambahan) -->
-            <div data-aos="fade-up" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2" class="rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg card-bg border border-blue-200 dark:border-white/5 section-glow shadow-xl shadow-blue-900/10 dark:shadow-none overflow-hidden hover:scale-105 duration-300 flex flex-col md:col-span-2 shadow-xl h-full">
-                <div class="h-44 sm:h-64 bg-gradient-to-r from-deepBlue to-accentBlue flex items-center justify-center relative">
-                    <a href="https://www.youtube.com/watch?v=00JMeaQ5FbI" target="_blank" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white text-accentBlue flex items-center justify-center text-xl sm:text-2xl shadow-xl hover:scale-110 transition z-10">
-                        <i class="fa-solid fa-play ml-1"></i>
-                    </a>
-                </div>
-                <div class="p-5 sm:p-6">
-                    <span class="text-xs px-2.5 py-1 rounded-full bg-accentBlue/10 text-accentBlue font-semibold">Dokumentasi Tambahan</span>
-                    <h4 class="font-bold text-base sm:text-lg mt-2 text-black dark:text-white">English project find and talking foreigner</h4>
-                    <p class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm mt-1">Video dokumentasi wawancara dengan turis asing di Kota Tua.</p>
+                <!-- Video 5 (YouTube Tambahan) -->
+                <div class="carousel-item rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg border border-blue-200 dark:border-white/5 overflow-hidden transition-all duration-300 hover:shadow-blue-500/30">
+                    <div class="h-44 sm:h-48 bg-gradient-to-r from-deepBlue to-accentBlue flex items-center justify-center relative">
+                        <a href="https://www.youtube.com/watch?v=00JMeaQ5FbI" target="_blank" class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white text-accentBlue flex items-center justify-center text-xl sm:text-2xl shadow-xl hover:scale-110 transition z-10">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col justify-center">
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-accentBlue/10 text-accentBlue font-semibold w-fit">Dokumentasi Tambahan</span>
+                        <h4 class="font-bold text-base sm:text-lg mt-3 text-black dark:text-white">English project find and talking foreigner</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-xs sm:text-sm mt-2">Video dokumentasi wawancara dengan turis asing di Kota Tua.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrap = document.querySelector('.carousel-wrap');
+            const items = document.querySelectorAll('.carousel-item');
+            if (!wrap || items.length === 0) return;
+
+            let currentAngle = 0;
+            let targetAngle = 0;
+            let isHovered = false;
+            const theta = 360 / items.length;
+
+            items.forEach((item, index) => {
+                item.addEventListener('mouseenter', () => {
+                    isHovered = true;
+                    // Find closest angle to bring this item to front
+                    let remainder = currentAngle % 360;
+                    if (remainder > 0) remainder -= 360; 
+                    let targetBase = -index * theta;
+                    let diff = targetBase - remainder;
+                    if (diff > 180) diff -= 360;
+                    if (diff < -180) diff += 360;
+                    targetAngle = currentAngle + diff;
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    isHovered = false;
+                });
+            });
+
+            function update() {
+                if (!isHovered) {
+                    targetAngle -= 0.5; // Auto rotate speed
+                }
+                
+                currentAngle += (targetAngle - currentAngle) * 0.1; // Lerp speed
+                wrap.style.transform = `rotateY(${currentAngle}deg)`;
+
+                items.forEach((item, index) => {
+                    let absAngle = (index * theta + currentAngle) % 360;
+                    if (absAngle < 0) absAngle += 360;
+                    if (absAngle > 180) absAngle -= 360;
+                    
+                    let dist = Math.abs(absAngle);
+                    
+                    // Dynamic blur and opacity based on distance from center
+                    let blur = (dist / 180) * 6; 
+                    let op = 1 - (dist / 180) * 0.8;
+                    
+                    item.style.filter = `blur(${blur}px)`;
+                    item.style.opacity = op;
+                });
+
+                requestAnimationFrame(update);
+            }
+            update();
+        });
+    </script>
 
     <!-- 7. SERTIFIKASI SECTION -->
     <section id="sertifikasi" class="py-12 sm:py-16 px-4 sm:px-6 max-w-7xl mx-auto relative z-10 mb-8 sm:mb-16">
@@ -540,6 +657,11 @@
                     <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full bg-accentBlue/10 text-accentBlue font-semibold w-fit">Jan 2017 - Feb 2018</span>
                 </div>
                 <p class="text-black dark:text-white text-xs sm:text-sm leading-relaxed">Menangani bidang desain grafis, tata letak cetak media, serta operasional percetakan digital dan produksi media promosi.</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="img/bnp-1.jpg" target="_blank" class="px-4 py-2 bg-accentBlue text-white text-xs font-semibold rounded-full hover:bg-blue-600 transition"><i class="fa-solid fa-image mr-1"></i> Gambar 1</a>
+                    <a href="img/bnp-2.jpg" target="_blank" class="px-4 py-2 bg-accentBlue text-white text-xs font-semibold rounded-full hover:bg-blue-600 transition"><i class="fa-solid fa-image mr-1"></i> Gambar 2</a>
+                    <a href="img/bnp-3.jpg" target="_blank" class="px-4 py-2 bg-accentBlue text-white text-xs font-semibold rounded-full hover:bg-blue-600 transition"><i class="fa-solid fa-image mr-1"></i> Gambar 3</a>
+                </div>
             </div>
             <!-- Work 2 -->
             <div data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1" class="p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg card-bg border border-blue-200 dark:border-white/5 section-glow shadow-xl shadow-blue-900/10 dark:shadow-none relative pl-8 sm:pl-12 hover:scale-[1.02] duration-300">
@@ -549,6 +671,11 @@
                     <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full bg-accentBlue/10 text-accentBlue font-semibold w-fit">Apr 2020 - Jul 2024</span>
                 </div>
                 <p class="text-black dark:text-white text-xs sm:text-sm leading-relaxed">Bertanggung jawab pada bagian divisi roll produksi, memastikan kelancaran alur operasional, kontrol kualitas, dan efisiensi lini produksi industri.</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="img/sinarjaya-1.jpg" target="_blank" class="px-4 py-2 bg-deepBlue text-white text-xs font-semibold rounded-full hover:bg-blue-600 transition"><i class="fa-solid fa-image mr-1"></i> Gambar 1</a>
+                    <a href="img/sinarjaya-2.jpg" target="_blank" class="px-4 py-2 bg-deepBlue text-white text-xs font-semibold rounded-full hover:bg-blue-600 transition"><i class="fa-solid fa-image mr-1"></i> Gambar 2</a>
+                    <a href="img/sinarjaya-3.jpg" target="_blank" class="px-4 py-2 bg-deepBlue text-white text-xs font-semibold rounded-full hover:bg-blue-600 transition"><i class="fa-solid fa-image mr-1"></i> Gambar 3</a>
+                </div>
             </div>
             <!-- Organization -->
             <div data-aos="fade-up" data-tilt data-tilt-max="3" data-tilt-glare="true" data-tilt-max-glare="0.1" class="p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-lg card-bg border border-blue-200 dark:border-white/5 section-glow shadow-xl shadow-blue-900/10 dark:shadow-none relative pl-8 sm:pl-12 hover:scale-[1.02] duration-300">
@@ -558,6 +685,9 @@
                     <span class="text-[11px] sm:text-xs px-3 py-1 rounded-full bg-accentBlue/10 text-accentBlue font-semibold w-fit">2024 - 2026</span>
                 </div>
                 <p class="text-black dark:text-white text-xs sm:text-sm leading-relaxed">Anggota aktif UKM Timekovi, berpartisipasi dalam berbagai kegiatan kolaboratif, pengembangan minat bakat, dan kepemimpinan.</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="img/timekovi-video.mp4" target="_blank" class="px-4 py-2 bg-blue-500 text-white text-xs font-semibold rounded-full hover:bg-blue-600 transition"><i class="fa-solid fa-video mr-1"></i> Lihat Video</a>
+                </div>
             </div>
         </div>
     </section>
