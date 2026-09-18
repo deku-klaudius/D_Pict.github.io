@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --color-darkBg: #05070b;
+  --color-cardBg: #0f172a;
+  --color-accentBlue: #3b82f6;
+  --color-deepBlue: #1e3a8a;
+}
+
+/* Animasi Neon Kilat / Listrik Background */
+@keyframes electricGlow {
+    0% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.05); }
+    100% { opacity: 0.3; transform: scale(1); }
+}
+.electric-bg {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(30,58,138,0.05) 50%, transparent 70%);
+    animation: electricGlow 8s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+}
+@media (min-width: 768px) {
+    .electric-bg {
+        width: 600px;
+        height: 600px;
+    }
+}
+/* Efek Cahaya / Glow Mengelilingi Section */
+.section-glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.4s ease;
+}
+.section-glow:hover {
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.4);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+.card-bg {
+    position: relative;
+    z-index: 1;
+}
+.card-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/img/abstract_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    opacity: 0.3;
+    z-index: -1;
+    border-radius: inherit;
+}
+html:not(.dark) .card-bg::before { display: none; }
+
+/* Styles untuk 3D Carousel */
+.carousel-scene {
+    width: 100%;
+    height: 350px;
+    perspective: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.carousel-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
+}
+.carousel-item {
+    position: absolute;
+    width: 260px;
+    height: 320px;
+    left: 50%;
+    top: 50%;
+    margin-left: -130px;
+    margin-top: -160px;
+    transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+@media (min-width: 640px) {
+    .carousel-item {
+        width: 300px;
+        height: 360px;
+        margin-left: -150px;
+        margin-top: -180px;
+    }
+    .carousel-scene {
+        height: 400px;
+    }
+}
+
+.carousel-item:nth-child(1) { transform: rotateY(0deg) translateZ(220px); }
+.carousel-item:nth-child(2) { transform: rotateY(72deg) translateZ(220px); }
+.carousel-item:nth-child(3) { transform: rotateY(144deg) translateZ(220px); }
+.carousel-item:nth-child(4) { transform: rotateY(216deg) translateZ(220px); }
+.carousel-item:nth-child(5) { transform: rotateY(288deg) translateZ(220px); }
+
+@media (min-width: 640px) {
+    .carousel-item:nth-child(1) { transform: rotateY(0deg) translateZ(320px); }
+    .carousel-item:nth-child(2) { transform: rotateY(72deg) translateZ(320px); }
+    .carousel-item:nth-child(3) { transform: rotateY(144deg) translateZ(320px); }
+    .carousel-item:nth-child(4) { transform: rotateY(216deg) translateZ(320px); }
+    .carousel-item:nth-child(5) { transform: rotateY(288deg) translateZ(320px); }
+}
