@@ -8,8 +8,8 @@ export default function About() {
         <main>
             
     {/*  Static Image Backgrounds  */}
-    <div className="fixed inset-0 w-full h-full z-0 bg-cover bg-center bg-no-repeat hidden dark:block" style={{ backgroundImage: "url('/img/dark_bg.jpg')" }}></div>
-    <div className="fixed inset-0 w-full h-full z-0 bg-cover bg-center bg-no-repeat block dark:hidden" style={{ backgroundImage: "url('/img/light_bg.jpg')" }}></div>
+    <div className="fixed inset-0 w-full h-full z-0 bg-cover bg-center bg-no-repeat hidden dark:block" style={{ backgroundImage: "url('img/dark_bg.jpg')" }}></div>
+    <div className="fixed inset-0 w-full h-full z-0 bg-cover bg-center bg-no-repeat block dark:hidden" style={{ backgroundImage: "url('img/light_bg.jpg')" }}></div>
 
     <Navbar />
 
@@ -44,7 +44,7 @@ export default function About() {
                         <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-2xl blur-xl opacity-40 group-hover:opacity-75 transition duration-500"></div>
                         <div className="relative bg-white dark:bg-cardBg shadow-lg shadow-blue-500/10 border border-blue-500/30 rounded-2xl p-4 glow-box text-center">
                             {/*  Ganti src dengan path foto profil Anda  */}
-                            <img src="/img/about/about.png" alt="Klaudius Oe Naimnou" className="rounded-xl w-80 h-96 object-cover mx-auto shadow-2xl" />
+                            <img src="img/about/about.png" alt="Klaudius Oe Naimnou" className="rounded-xl w-80 h-96 object-cover mx-auto shadow-2xl" />
                             <div className="mt-4 bg-blue-950/90 border border-blue-500/40 rounded-xl py-3 px-4">
                                 <h4 className="text-blue-400 font-bold text-base"><i className="fa fa-university mr-2"></i>LP3I Jakarta Pusat</h4>
                                 <p className="text-gray-600 dark:text-gray-400 text-sm">Status: Kampus Utama</p>
@@ -276,8 +276,8 @@ export default function About() {
                 <div className="glow-box bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-md card-bg h-full flex flex-col justify-center rounded-2xl p-6 space-y-4 text-center">
                     <div className="overflow-hidden rounded-xl border border-blue-500/30">
                         {/*  Ganti path gambar sertifikat sesuai file Anda  */}
-                        <a href="/img/about/about.png" target="_blank">
-                            <img src="/img/about/about.png" alt="Database Administrator" className="w-full h-64 object-cover hover:scale-105 transition duration-500" />
+                        <a href="img/about/about.png" target="_blank">
+                            <img src="img/about/about.png" alt="Database Administrator" className="w-full h-64 object-cover hover:scale-105 transition duration-500" />
                         </a>
                     </div>
                     <h3 className="text-xl font-bold text-black dark:text-white">Database Administrator</h3>
@@ -286,8 +286,8 @@ export default function About() {
                 {/*  Sertifikat 2  */}
                 <div className="glow-box bg-white/90 dark:bg-cardBg/60 shadow-lg shadow-blue-500/10 backdrop-blur-md card-bg h-full flex flex-col justify-center rounded-2xl p-6 space-y-4 text-center">
                     <div className="overflow-hidden rounded-xl border border-blue-500/30">
-                        <a href="/img/about/about.png" target="_blank">
-                            <img src="/img/about/about.png" alt="TOK" className="w-full h-64 object-cover hover:scale-105 transition duration-500" />
+                        <a href="img/about/about.png" target="_blank">
+                            <img src="img/about/about.png" alt="TOK" className="w-full h-64 object-cover hover:scale-105 transition duration-500" />
                         </a>
                     </div>
                     <h3 className="text-xl font-bold text-black dark:text-white">TOK (Teknik Operator Komputer)</h3>
