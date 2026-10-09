@@ -127,7 +127,7 @@ export default function Contact() {
     <footer className="bg-gray-100 dark:bg-[#030508] border-t border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-400 py-12 sm:py-16 px-4 sm:px-6 relative z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 items-start">
             <div className="space-y-3">
-                <span className="text-2xl font-black tracking-wider text-black dark:text-white">D_PICT<span className="text-accentBlue">.</span></span>
+                <span className="text-2xl font-black tracking-wider text-black dark:text-white">D_Pict<span className="text-accentBlue">.</span></span>
                 <p className="text-xs sm:text-sm">Portofolio Klaudius Oe Naimnou.</p>
             </div>
             <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">

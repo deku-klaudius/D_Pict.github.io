@@ -38,7 +38,7 @@ export default function Navbar() {
     <nav id="navbar" className="fixed top-0 left-0 right-0 z-50 bg-white/70 dark:bg-darkBg/50 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
         <Link to="/" className="text-xl sm:text-2xl font-black tracking-wider text-black dark:text-white">
-          D_PICT<span className="text-accentBlue">.</span>
+          D_Pict<span className="text-accentBlue">.</span>
         </Link>
         
         {/* Desktop Links */}
